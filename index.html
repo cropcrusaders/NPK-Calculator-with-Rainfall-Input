@@ -13,38 +13,38 @@
             <!-- Crop Type -->
             <div class="input-group">
                 <label for="cropType">Crop Type:</label>
-               <select id="cropType" required>
-    <option value="" disabled selected>Select a crop</option>
-    <option value="mung beans">Mung Beans</option>
-    <option value="chickpeas">Chickpeas</option>
-    <option value="lentils">Lentils</option>
-    <option value="peas">Peas</option>
-    <option value="soybeans">Soybeans</option>
-    <option value="common beans">Common Beans</option>
-    <option value="peanuts">Peanuts</option>
-    <option value="wheat">Wheat</option>
-    <option value="barley">Barley</option>
-    <option value="corn">Corn</option>
-    <option value="rice">Rice</option>
-    <option value="oats">Oats</option>
-    <option value="sorghum">Sorghum</option>
-    <option value="canola">Canola</option>
-    <option value="sunflower">Sunflower</option>
-    <option value="sesame">Sesame</option>
-    <option value="safflower">Safflower</option>
-    <option value="cotton">Cotton</option>
-    <option value="flax">Flax</option>
-    <option value="potatoes">Potatoes</option>
-    <option value="cassava">Cassava</option>
-    <option value="sugar beet">Sugar Beet</option>
-    <option value="sugarcane">Sugarcane</option>
-    <option value="forage sorghum">Forage Sorghum</option>
-    <option value="lucerne">Lucerne (Alfalfa)</option>
-    <option value="ryegrass">Ryegrass</option>
-    <option value="clover">Clover</option>
-    <option value="barley (forage)">Barley (Forage)</option>
-    <option value="oat hay">Oat Hay</option>
-    <option value="sorghum (forage)">Sorghum (Forage)</option>
+                <select id="cropType" required>
+                    <option value="" disabled selected>Select a crop</option>
+                    <option value="mung beans">Mung Beans</option>
+                    <option value="chickpeas">Chickpeas</option>
+                    <option value="lentils">Lentils</option>
+                    <option value="peas">Peas</option>
+                    <option value="soybeans">Soybeans</option>
+                    <option value="common beans">Common Beans</option>
+                    <option value="peanuts">Peanuts</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="barley">Barley</option>
+                    <option value="corn">Corn</option>
+                    <option value="rice">Rice</option>
+                    <option value="oats">Oats</option>
+                    <option value="sorghum">Sorghum</option>
+                    <option value="canola">Canola</option>
+                    <option value="sunflower">Sunflower</option>
+                    <option value="sesame">Sesame</option>
+                    <option value="safflower">Safflower</option>
+                    <option value="cotton">Cotton</option>
+                    <option value="flax">Flax</option>
+                    <option value="potatoes">Potatoes</option>
+                    <option value="cassava">Cassava</option>
+                    <option value="sugar beet">Sugar Beet</option>
+                    <option value="sugarcane">Sugarcane</option>
+                    <option value="forage sorghum">Forage Sorghum</option>
+                    <option value="lucerne">Lucerne (Alfalfa)</option>
+                    <option value="ryegrass">Ryegrass</option>
+                    <option value="clover">Clover</option>
+                    <option value="barley (forage)">Barley (Forage)</option>
+                    <option value="oat hay">Oat Hay</option>
+                    <option value="sorghum (forage)">Sorghum (Forage)</option>
                 </select>
             </div>
 
@@ -78,6 +78,34 @@
 
         <!-- Results Section -->
         <div id="results"></div>
+
+        <!-- Fertilizer Recommendations -->
+        <div class="input-group">
+            <label for="fertilizer">Recommended Fertilizer:</label>
+            <select id="fertilizer" disabled>
+                <option value="" disabled selected>Select a fertilizer</option>
+                <!-- Options will be populated dynamically via JavaScript -->
+            </select>
+        </div>
+
+        <!-- Fertilizer Information Table -->
+        <div id="fertilizerInfo" class="fertilizer-info">
+            <h2>Common Fertilizers and Their NPK Ratios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fertilizer Name</th>
+                        <th>N (%)</th>
+                        <th>P₂O₅ (%)</th>
+                        <th>K₂O (%)</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fertilizer data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script src="scripts.js"></script>
