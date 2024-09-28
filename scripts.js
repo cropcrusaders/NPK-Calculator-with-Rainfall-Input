@@ -19,9 +19,39 @@ function calculateNPK() {
     }
 
     // Define default NPK requirements for specific crops
+
     const npkRequirements = {
-        "corn": { N: 180, P: 60, K: 40 },
+        "mung beans": { N: 25, P: 50, K: 50 },
+        "chickpeas": { N: 20, P: 60, K: 40 },
+        "lentils": { N: 20, P: 40, K: 30 },
+        "peas": { N: 25, P: 50, K: 50 },
+        "soybeans": { N: 30, P: 60, K: 80 },
+        "common beans": { N: 30, P: 50, K: 50 },
+        "peanuts": { N: 25, P: 40, K: 60 },
         "wheat": { N: 150, P: 50, K: 30 },
+        "barley": { N: 120, P: 40, K: 30 },
+        "corn": { N: 180, P: 60, K: 40 },
+        "rice": { N: 100, P: 40, K: 40 },
+        "oats": { N: 80, P: 30, K: 20 },
+        "sorghum": { N: 100, P: 40, K: 40 },
+        "canola": { N: 150, P: 60, K: 60 },
+        "sunflower": { N: 100, P: 60, K: 80 },
+        "sesame": { N: 50, P: 30, K: 40 },
+        "safflower": { N: 80, P: 40, K: 40 },
+        "cotton": { N: 200, P: 60, K: 100 },
+        "flax": { N: 80, P: 40, K: 40 },
+        "potatoes": { N: 150, P: 60, K: 200 },
+        "cassava": { N: 100, P: 50, K: 150 },
+        "sugar beet": { N: 120, P: 60, K: 180 },
+        "sugarcane": { N: 160, P: 80, K: 200 },
+        "forage sorghum": { N: 80, P: 30, K: 60 },
+        "lucerne": { N: 0, P: 30, K: 150 },
+        "ryegrass": { N: 150, P: 40, K: 80 },
+        "clover": { N: 0, P: 30, K: 100 },
+        "barley (forage)": { N: 100, P: 40, K: 60 },
+        "oat hay": { N: 80, P: 30, K: 50 },
+        "sorghum (forage)": { N: 80, P: 30, K: 60 },
+    };
         // Add more crops as needed
     };
 
