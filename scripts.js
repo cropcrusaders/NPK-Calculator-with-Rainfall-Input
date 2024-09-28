@@ -1,7 +1,7 @@
 function calculateNPK() {
     // Get user input values
     const cropTypeElement = document.getElementById('cropType');
-    const cropType = cropTypeElement.value;
+    const cropType = cropTypeElement.value.toLowerCase();
     const soilN = parseFloat(document.getElementById('soilN').value);
     const soilP = parseFloat(document.getElementById('soilP').value);
     const soilK = parseFloat(document.getElementById('soilK').value);
@@ -13,13 +13,15 @@ function calculateNPK() {
         alert("Please select a crop type.");
         return;
     }
-    if (isNaN(soilN) || isNaN(soilP) || isNaN(soilK) || soilN < 0 || soilP < 0 || soilK < 0) {
+    if (
+        isNaN(soilN) || isNaN(soilP) || isNaN(soilK) ||
+        soilN < 0 || soilP < 0 || soilK < 0
+    ) {
         alert("Please enter valid soil nutrient values.");
         return;
     }
 
     // Define default NPK requirements for specific crops
-
     const npkRequirements = {
         "mung beans": { N: 25, P: 50, K: 50 },
         "chickpeas": { N: 20, P: 60, K: 40 },
@@ -52,8 +54,7 @@ function calculateNPK() {
         "oat hay": { N: 80, P: 30, K: 50 },
         "sorghum (forage)": { N: 80, P: 30, K: 60 },
     };
-        // Add more crops as needed
-    };
+    // Add more crops as needed
 
     // Lookup crop NPK requirements
     const cropNPK = npkRequirements[cropType];
@@ -83,7 +84,7 @@ function calculateNPK() {
     // Display results
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
-        <h2>NPK Recommendation for ${cropType.charAt(0).toUpperCase() + cropType.slice(1)}</h2>
+        <h2>NPK Recommendation for ${cropTypeElement.options[cropTypeElement.selectedIndex].text}</h2>
         <p>Based on your inputs, the following additional amounts of nutrients are recommended:</p>
         <ul>
             <li><strong>Nitrogen (N):</strong> ${requiredN.toFixed(2)} kg/ha</li>
